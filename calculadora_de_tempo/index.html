@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="PT-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de tempo</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <section class="container">
+        <h1>Calculadora de Tempo</h1>
+        <form action="/" class="calculadora" id="formulario" method="POST">
+            <label for="segundos">Qual é o total de segundos</label>
+            <input type="text" id="segundos-entrada" name="segundos" required>
+            <button type="submit">Calcular</button>
+        </form>
+    </section>
+    <section class="resultado">
+        <h2>Totalizando Tudo</h2>
+        <p>Analisando o valor que você digitou, [??] segundos 
+            equivale, a um total de:<p>
+        <ul>
+            <li><span id="semanas">[??]</span> semanas</li>
+            <li><span id="dias">[??]</span> dias</li>
+            <li><span id="horas">[??]</span> horas</li>
+            <li><span id="minutos">[??]</span> minutos</li>
+            <li><span id="segundosResultado">[??]</span> segundos</li>
+        </ul>
+    </section>
+
+    <script src="src/js/index.js"></script>
+</body>
+</html>
