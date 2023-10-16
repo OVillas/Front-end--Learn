@@ -9,10 +9,8 @@ document.addEventListener("click", function(event) {
     switch(element.className) {
         case "adcionar-tarefa":
             if (!inputNovaTarefa.value) return;
-            
             const novaTarefa = inputNovaTarefa.value;
             adcionarNovaTarefa(novaTarefa);
-
             inputNovaTarefa.value = "";
             break;
 
