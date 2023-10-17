@@ -15,6 +15,22 @@ function criarCalculadora() {
       this.cliqueBotoes();
     },
 
+    realizarConta() {
+        let conta = this.display.value;
+
+        try {
+            conta = eval(conta);
+            if (!conta) {
+                alert("Conta inválida!");
+                return;
+            }
+            this.display.value = String(conta);
+        } catch (err) {
+            alert("Conta inválida");
+            return;
+        }
+    },
+
     cliqueBotoes() {
       document.addEventListener("click", (event) => {
         const element = event.target;
@@ -29,6 +45,10 @@ function criarCalculadora() {
 
         if (element.classList.contains("btn-del")) {
           this.deletarNumero();
+        }
+
+        if (element.classList.contains("btn-eq")) {
+          this.realizarConta();
         }
       });
     },
